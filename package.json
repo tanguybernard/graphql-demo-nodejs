@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
+    "start": "npm run clean && tsc && node build/graphql-express-test/index.js",
     "start:apollo": "tsc && node build/apollo-library-simple/index.js",
     "start:apollo2": "tsc && npm run copy-files && node build/apollo-library-example/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
