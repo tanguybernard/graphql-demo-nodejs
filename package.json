@@ -1,0 +1,31 @@
+{
+  "name": "demo-graphql-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "start:apollo": "tsc && node build/apollo-library-simple/index.js",
+    "start:apollo2": "tsc && npm run copy-files && node build/apollo-library-example/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-files": "copyfiles apollo-library-example/graphql/**/*.graphql build/",
+    "clean": "rimraf build/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.6.4",
+    "express": "^4.17.3",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/express-graphql": "^0.9.0",
+    "@types/graphql": "^14.5.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2"
+  }
+}
